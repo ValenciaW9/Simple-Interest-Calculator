@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="maindiv">
+        <h1>Simple Interest Calculator</h1>
+
+        Amount: <input type="number" id="principal"><br/>
+
+        <input type="range" id="rate" name="rate" min="1" max="20" onchange="updateRate()">
+        Rate: <span id="rate_val"></span><br/>
+
+        No. of Years: <input type="number" id="years" list="all_years"><br/>
+
+        <datalist id="all_years">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <!-- Add more options as needed -->
+        </datalist>
+
+        <button onclick="compute()">Compute</button><br>
+
+        Interest: <span id="result"></span><br>
+    </div>
+
+    <footer>
+        © This Calculator belongs to Valencia Walker
+    </footer>
+</body>
+</html>
+
